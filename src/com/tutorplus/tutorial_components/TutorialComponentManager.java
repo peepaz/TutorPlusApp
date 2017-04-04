@@ -11,6 +11,7 @@ public class TutorialComponentManager {
 
     public TutorialComponentManager() {
         this.registeredComponents = new HashMap<String,TutorialComponent>();
+        this.registerSystemComponents();
     }
 
     //initializes instances of tutorial tutorial_components

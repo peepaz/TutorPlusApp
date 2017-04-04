@@ -158,15 +158,6 @@ public class TutorPlusApplication extends UnicastRemoteObject implements TutorPl
 
     }
 
-    @Override
-    public void updateTutorial(HashMap<String, Object> tutorialDetails, String tutorialId, String userSessionId) throws RemoteException, UserMgmtException {
-
-        String username = TutorPlusApplication.userSession.getUsername(userSessionId);
-        if (username != null) {
-
-        }
-        else throw new UserMgmtException(UserMgmtException.LOGIN);
-    }
 
     @Override
     public void submitTutorial(Tutorial tutorial, String userSessionId) throws RemoteException, UserMgmtException {
@@ -190,7 +181,23 @@ public class TutorPlusApplication extends UnicastRemoteObject implements TutorPl
     }
 
     @Override
-    public HashMap<String, Object> getComponentRegisteredList(String userSessionId) {
+    public void updateATutorial(HashMap<String, Object> tutorialDetails,
+                                String userSessionId, String tutorialId) throws RemoteException{
+
+    }
+
+    @Override
+    public void removeATutorial(String tutorialId, String userSessionId) throws RemoteException {
+
+    }
+
+    @Override
+    public boolean publishAtutorial(String tutorialid, String userSessionId) throws RemoteException {
+        return false;
+    }
+
+    @Override
+    public HashMap<String, Object> getComponentRegisteredList(String userSessionId) throws RemoteException {
         return null;
     }
 
